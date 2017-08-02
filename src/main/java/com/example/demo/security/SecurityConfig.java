@@ -14,7 +14,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		
 		http
 			.authorizeRequests()
-				.antMatchers("/", "/auth/token").permitAll()
+				.antMatchers("/", "/auth/token", "/auth/validateToken").permitAll()
 				.anyRequest().authenticated();
 			
 	}
